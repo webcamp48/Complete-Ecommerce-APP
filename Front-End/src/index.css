@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F6F6f9;
+    font-family: "outfit";
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.color-main{
+    color: #1976d2;
+}
+
+/* breadcrumb */
+.breadcrumb{
+    margin-top: 1rem;
+    padding: 10px 4%;
+    background-color: #fff;
+    border-top: 2px solid #1976d2;
+
+}
+a{
+    color: #1976d2;
+}
+/* for input error */
+.error{
+    color: red;
+    margin: 15px ;
+}
+.nofound{
+    border: 2px solid #ff4c4c;
+    background-color: #ffe6e6;
+    color: #ff4c4c;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2.5rem auto;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode {
+    background-color: #2c3e50;
+}
+
+.avatar-fallback {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    background-color: #1976d2; 
+    border: 3px solid #85aec6;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; 
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  

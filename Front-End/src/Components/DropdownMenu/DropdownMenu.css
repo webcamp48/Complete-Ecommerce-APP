@@ -1,0 +1,111 @@
+.dropDownMenu {
+    width: 230px;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    color: #fff;
+    position: absolute;
+    top: 3.5rem;
+    right: 3.4rem;
+    z-index: 999;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dropDownMenu-top {
+    padding: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .dropDownMenu-top h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #1976d2;
+  }
+  .dropDownMenu-top > svg {
+    color: #1976d2;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .dropDownMenu-top img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1976d2;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1.5px solid #ddd;
+    margin: 0;
+  }
+  
+  .dropDownMenu-center {
+    padding: 8px 16px;
+  }
+  
+  .dropDownMenucenter-lists li {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #1976d2;
+  }
+  .dropDownMenucenter-lists li span > svg {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .dropDownMenucenter-lists li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    transition: margin 0.3s;
+  }
+  
+  .dropDownMenucenter-lists li a svg {
+    margin-right: 8px;
+  }
+  
+  .dropDownMenucenter-lists li a:hover {
+    margin-left: 10px;
+  }
+  
+  .dropDownMenu-bottom {
+    padding: 8px 16px;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropDownMenu-bottom-logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .dropDownMenu-bottom-logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 40px;
+  }
+  
+  .dropDownMenu-bottom-logo span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1976d2;
+  }
+  
+  @media (max-width: 400px) {
+    .dropDownMenu {
+      width: 200px;
+    }
+  }
+  

@@ -1,0 +1,50 @@
+
+.contact-us {
+    padding: 50px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  .contact-us-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .contact-us-table thead {
+    background-color: #4886c4;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact-us-table th, .contact-us-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  .contact-us .contact-us-table tr:last-child{
+    border-bottom: 2px solid #4886c4;
+  }
+  .contact-us-table tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-us-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .contact-us-table tbody td {
+    font-size: 14px;
+    color: #333;
+    word-wrap: break-word;
+  }
+  
+  .contact-us-table td:nth-child(1) {
+    font-weight: bold;
+  }
+

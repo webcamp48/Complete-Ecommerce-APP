@@ -1,0 +1,62 @@
+.AddUpdateSlider {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  
+  .AddUpdateSlider h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4886c4;
+  }
+  
+
+  .slider-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .input-slider input[type="text"],
+  .input-slider input[type="url"]  {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+  }
+  
+  .input-slider input[type="text"]:focus ,
+  .input-slider input[type="url"]:focus{
+    outline: none;
+    border-color: #4886c4;
+  }
+  
+  .input-slider label[for="slider-img"] img {
+    object-fit: cover;
+    cursor: pointer;
+    width: 150px;
+  }
+  
+  .input-slider input[type="file"] {
+    display: none;
+  }
+  
+ 

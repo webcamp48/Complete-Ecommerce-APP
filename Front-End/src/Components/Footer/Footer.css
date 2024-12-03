@@ -1,0 +1,38 @@
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    padding: 2rem 5%;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    color: #fff;
+    margin-top: 4rem;
+
+}
+.footer > div {
+    flex: 1;
+    margin: 0 15px;
+  }
+.footer h2{
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.footer .footer-left{
+    width: 40px;
+    height: 40px;
+}
+.footer-1 p{
+    margin-top: 1rem;
+}
+.footer-1-payement-method {
+    gap: 1rem;
+}
+.footer .footer-list li{
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.1rem;
+}
+
+.footer .contact-social{
+    margin-bottom: 3rem;
+}

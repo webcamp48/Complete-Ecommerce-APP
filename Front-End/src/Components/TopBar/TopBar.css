@@ -1,0 +1,54 @@
+
+.topbar {
+  color: #fff;
+  padding: 5px 4%;
+  background-color: #333;
+}
+
+.topbar-left,
+.topbar-center{
+  display: flex;
+  align-items: center;
+}
+
+.topbar-left {
+  display: flex;
+  gap: 10px;
+}
+
+.topbar-left select {
+  background-color: transparent;
+  color: #fff;
+  padding: 5px 30px; 
+  border-radius: 5px;
+  appearance: none; 
+  position: relative;
+  font-size: 14px;
+  border: 0.5px solid;
+}
+
+.select-icon {
+  position: absolute;
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%); 
+  pointer-events: none; 
+  color: #fff; 
+  font-size: 14px; 
+}
+
+.topbar-left select option {
+  background-color: #fff;
+  color: #000;
+}
+
+.topbar-left-country,
+.topbar-left-language {
+  position: relative;
+}
+
+.topbar-center p {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+}

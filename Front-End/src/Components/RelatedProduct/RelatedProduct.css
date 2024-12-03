@@ -1,0 +1,44 @@
+
+.related-products-card-slider{
+    margin: 40px 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    max-width: 100%;
+    justify-content: center;
+    gap: 40px;
+    padding: 0px 5%;
+    position: relative;
+    background-color: #F6F6f9;
+
+}
+.related-products-card-slider .slick-slide {
+    padding: 0 10px; 
+    margin-bottom: 20px;
+}
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #106eea;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    color: white;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.arrow:hover {
+    opacity: 0.7;
+}

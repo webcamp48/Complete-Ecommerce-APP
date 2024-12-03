@@ -1,0 +1,99 @@
+.UserOrderList {
+    padding: 20px 4%;
+    margin: auto;
+}
+.UserOrderList h2{
+    background-color: #1976d2;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 10px 0;
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+.UserOrderList-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-size: 16px;
+    border-radius: 8px;
+    overflow: scroll;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    background-color: #fff;
+}
+
+.UserOrderList-table thead tr {
+    background-color: #1976d2;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.UserOrderList-table th {
+    padding: 8px 10px;
+    border: 2px solid #dddddd;
+
+}
+
+.UserOrderList-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.UserOrderList-table tbody tr td:nth-child(3){
+    min-width: 150px;
+    
+}
+  
+.UserOrderList-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.UserOrderList-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.UserOrderList-table td {
+    padding: 8px 10px;
+    color: #333333;
+    border: 2px solid #dddddd;
+    text-align: center;
+}
+
+.UserOrderList-table tbody tr:last-of-type {
+    border-bottom: 2px solid #1976d2;
+}
+
+@media (max-width: 768px) {
+    .UserOrderList-table thead {
+        display: none;
+    }
+
+    .UserOrderList-table, .UserOrderList-table tbody, .UserOrderList-table tr, .UserOrderList-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .UserOrderList-table tr {
+        margin-bottom: 15px;
+    }
+
+    .UserOrderList-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .UserOrderList-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+        background-color: #f9f9f9;
+    }
+}

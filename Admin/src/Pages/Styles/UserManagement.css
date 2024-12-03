@@ -1,0 +1,50 @@
+
+.customer {
+    padding: 50px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  .customer-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .customer-table thead {
+    background-color: #4886c4;
+    color: white;
+    text-align: center;
+  }
+  
+  .customer-table th, .customer-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  .customer .customer-table tr:last-child{
+    border-bottom: 2px solid #4886c4;
+  }
+  .customer-table tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .customer-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .customer-table tbody td {
+    font-size: 14px;
+    color: #333;
+    word-wrap: break-word;
+  }
+  
+  .customer-table td:nth-child(1) {
+    font-weight: bold;
+  }
+

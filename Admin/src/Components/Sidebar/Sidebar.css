@@ -1,0 +1,150 @@
+.sidebar {
+    width: 260px;
+    color: #f9f9f9;
+    padding: 20px;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  .sidebar .sidebar-admin-info{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar .sidebar-admin-info h4{
+    color: #4886c4;
+    font-size: 1.5rem;
+  }
+  .sidebar .sidebar-admin-info img{
+    min-width: 80px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  .sidebar-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  .sidebar-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, margin 0.3s ease;
+    cursor: pointer;
+    color: #4886c4;
+  }
+  .sidebar .sidebar-box:hover,
+  .sidebar .dropdownmenu-item:hover{
+    margin-left: 1rem;
+  }
+  .sidebar-box svg {
+    margin-right: 10px;
+    font-size: 26px;
+  }
+  .sidebar .sidebar-box.active{
+    background-color: #4886c4;
+    color: #fff;
+    transition:  all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  .sidebar-box h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .dropdownmenu{
+    color: #4886c4;
+    margin-left: 1.3rem;
+  }
+  .sidebar .dropdownmenu .dropdownmenu-item svg{
+    font-size: 20px;
+
+
+  }
+  .sidebar .dropdownmenu h3{
+    font-weight: 500;
+    font-size: 1rem;
+
+  }
+  .dropdownmenu-item{
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 1rem;
+    transition: margin 0.3s ease;
+}
+  
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+      padding: 15px;
+    }
+  
+    .sidebar-box h2 {
+      font-size: 14px;
+    }
+  
+    .sidebar-box svg {
+      font-size: 20px;
+    }
+  }
+  
+
+
+
+  /* import React from 'react';
+import { MdDashboard, MdCategory, MdProductionQuantityLimits, MdPerson } from "react-icons/md";
+import StarBorder from '@mui/icons-material/StarBorder';
+import './Sidebar.css';
+import logo_img from '../../assets/admin-images/logo.png';
+import SocialMedia from './../SocialMedia/SocialMedia';
+import DropdownMenu from '../ReuseableComponent/DropDownMenu';
+
+const Sidebar = () => {
+  const handleAddProduct = () => {
+    console.log('Add Product Clicked');
+  };
+
+
+  const productItems = [
+    { text: 'Add Product', icon: <StarBorder />, onClick: handleAddProduct },
+    { text: 'Update Product', icon: <StarBorder /> },
+    { text: 'Delete Product', icon: <StarBorder /> },
+  ];
+
+  return (
+    <section className="sidebar">
+      <div className="sidebar-admin-info">
+        <img src={logo_img} alt="Admin Profile" />
+        <h4>Admin Name</h4>
+        <span>info@gmail.com</span>
+        <SocialMedia />
+      </div>
+      <div className="sidebar-container">
+        <div className="sidebar-box">
+          <MdDashboard />
+          <h2>Dashboard</h2>
+        </div>
+        <div className="sidebar-box">
+          <MdCategory />
+          <h2>Category</h2>
+        </div>
+        <DropdownMenu 
+          mainTitle="Product Management" 
+          mainIcon={<MdProductionQuantityLimits />} 
+          items={productItems} 
+        />
+        <div className="sidebar-box">
+          <MdPerson />
+          <h2>Profile</h2>
+        </div>
+       </div>
+    </section>
+  );
+}
+
+export default Sidebar; */ 

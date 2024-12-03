@@ -1,0 +1,76 @@
+.card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 
+                0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), 
+                inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s;
+    &:hover{
+        box-shadow: none;
+
+    }
+}
+
+.card-top {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    
+}
+  /* chips badges */
+  .chip-badges{
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+.card-top img {
+    width: 100%;
+    object-fit: cover; 
+    transition: transform 0.4s;
+}
+.card-top img:hover{
+    transform: scale(1.1);
+
+}
+.card-bottom {
+    padding: 1rem;
+    color: #333;
+}
+
+
+
+.card-bottom .card-bottom-title {
+    font-size: 20px;
+    margin: 0.3rem 0;
+    color: #1976d2;
+
+}
+
+.card-bottom .card-bottom-desc {
+    font-size: 1rem;
+}
+
+.card-bottom .card-bottom-rating,
+.product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+.product-price{
+    color: #1976d2;
+}
+
+ .product-price .price-old {
+    text-decoration: line-through;
+    color: #888; 
+
+}

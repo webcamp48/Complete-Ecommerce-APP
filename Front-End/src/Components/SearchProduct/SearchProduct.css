@@ -1,0 +1,14 @@
+.searchProduct-products-card{
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    max-width: 100%;
+    justify-content: center;
+    gap: 40px;
+    padding: 0px 5%;
+}
+.load-more{
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+}
