@@ -10,7 +10,8 @@ const FetchSlider = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { slides, status, error } = useSelector((state) => state.slider);
-  const API_URL_Image = `http://localhost:3002`;
+  const API_URL_Image = import.meta.env.VITE_BACKEND_URL;
+
 
   // Fetch sliders when the component mounts
   useEffect(() => {

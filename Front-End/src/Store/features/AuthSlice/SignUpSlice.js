@@ -4,7 +4,8 @@ import { toast } from "react-toastify";
 
 export const signupUser = createAsyncThunk("auth/signupUser", async (formData, { rejectWithValue })=> {
     try {
-        const response = await axios.post("http://localhost:3002/api/auth/signup", formData);
+        const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/signup`, formData);
+
         if(response.data.success){
             toast.success(response.data.message);
             return response.data

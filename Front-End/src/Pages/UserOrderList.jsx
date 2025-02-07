@@ -7,7 +7,7 @@ import { fetchUserOrder } from './../Store/features/Order/OrderSlice';
 
 const UserOrderList = () => {
 
-  const API_URL_Image = `http://localhost:3002`;
+  const API_URL_Image = `${import.meta.env.VITE_BACKEND_URL}`;
 
   const dispatch = useDispatch();
   const userId = useSelector((state) => state.login.userId);

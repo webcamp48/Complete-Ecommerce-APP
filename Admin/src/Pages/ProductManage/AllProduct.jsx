@@ -9,7 +9,8 @@ import Loader from './../../Components/ReuseableComponent/Loader';
 import { Link } from 'react-router-dom';
 
 const AllProduct = () => {
-  const API_URL = `http://localhost:3002`;
+  const API_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 
   const dispatch = useDispatch();

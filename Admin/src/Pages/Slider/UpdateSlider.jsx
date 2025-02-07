@@ -11,7 +11,7 @@ const UpdateSlider = () => {
     const {id} = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const API_URL_Image = `http://localhost:3002`;
+    const API_URL_Image = import.meta.env.VITE_BACKEND_URL;
     const [imagePreview, setImagePreview] = useState(false);
     const {slides, status} = useSelector((state) => state.slider);
 

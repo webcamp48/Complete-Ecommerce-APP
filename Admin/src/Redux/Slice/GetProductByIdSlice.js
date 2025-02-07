@@ -3,7 +3,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
-const API_URL = `http://localhost:3002/api/product/getProductById`;
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/product/getProductById`;
+
 
 // Async thunk for fetching product by ID
 export const getProductById = createAsyncThunk("getProductById/fetchProductById", async(id)=>{

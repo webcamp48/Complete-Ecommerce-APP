@@ -25,7 +25,7 @@ const ResetPassword = () => {
     const submitHandler = async(e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3002/api/auth/resetPassword", formData);
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/resetPassword`, formData);
             toast.success(response.data.message);
             navigate("/otp-verification", { state: { from: "reset" } });
             setFormData({

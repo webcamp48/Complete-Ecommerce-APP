@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const API_URL = 'http://localhost:3002/api/slider'
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/slider`;
+
 
 
 // fetch Slider Home

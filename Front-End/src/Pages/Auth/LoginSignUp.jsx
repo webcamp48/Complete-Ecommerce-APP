@@ -70,7 +70,8 @@ const LoginSignUp = () => {
 
         if(!formData.password){
             errors.password = "Password is required";
-        }else if (loginSignUp === 'Sign Up' && !passwordRegex.test(formData.password)){
+        }
+        else if (loginSignUp === 'Sign Up' && !passwordRegex.test(formData.password)){
             errors.password = 'Password must contain at least 6 characters, one uppercase letter, one lowercase letter, one digit and one special character.';
         }
         if(loginSignUp === 'Sign Up' && !formData.confirmPassword){

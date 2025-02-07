@@ -6,7 +6,8 @@ import { toast } from "react-toastify";
 // Async function to handle login
 export const loginUser = (formData) => async (dispatch) => {
     try {
-        const response = await axios.post("http://localhost:3002/api/auth/login", formData);
+        const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, formData);
+
         const { user, token, message } = response.data;
         dispatch(loginUserSuccess({ token, userId: user._id , otpVerified : user.otpVerified}));
         toast.success(message);

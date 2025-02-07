@@ -7,7 +7,8 @@ import { toast } from "react-toastify";
 export const fetchContactUsMessage = () => async (dispatch) => {
     dispatch(contactUsRequest());
     try {
-        const response = await axios.get("http://localhost:3002/api/contact/fetchContactUs");
+        const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/contact/fetchContactUs`;
+        const response = await axios.get(API_URL);        
         dispatch(contactUsSuccess(response.data.fetchContact));
     } catch (error) {
         console.error(error);
@@ -21,7 +22,8 @@ export const fetchContactUsMessage = () => async (dispatch) => {
 export const deleteContactUsMessage = (id) => async (dispatch) => {
     dispatch(contactUsRequest());
     try {
-        const response = await axios.delete(`http://localhost:3002/api/contact/deleteContactUs/${id}`);
+        const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/contact/deleteContactUs/${id}`;
+        const response = await axios.delete(API_URL);        
         dispatch(fetchContactUsMessage())
         toast.success(response.data.message);
     } catch (error) {

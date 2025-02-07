@@ -11,7 +11,8 @@ import { addToCart } from '../../Store/features/CartSlice/CartSlice';
 import { Link } from 'react-router-dom';
 
 const ProductDesc = ({productData}) => {
-  const API_URL_IMAGE = "http://localhost:3002/images/products";
+  const API_URL_IMAGE = `${import.meta.env.VITE_BACKEND_URL}/images/products`;
+
 
   const dispatch = useDispatch();
   const userId = useSelector((state)=> state.login.userId);

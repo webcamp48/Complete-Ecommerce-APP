@@ -13,7 +13,8 @@ const SliderHome = () => {
 
   const dispatch = useDispatch();
   const {sliderData, status} = useSelector((state) => state.sliderHome);
-  const API_URL_Image = `http://localhost:3002`;
+  const API_URL_Image = `${import.meta.env.VITE_BACKEND_URL}`;
+
 
 
   // fetch Slider Data when component mount

@@ -10,7 +10,8 @@ import Loader from '../../Components/ReuseableComponent/Loader';
 
 const UpdateProduct = () => {
 
-    const API_URL = `http://localhost:3002`;
+    const API_URL = import.meta.env.VITE_BACKEND_URL;
+
     const {id} = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate()

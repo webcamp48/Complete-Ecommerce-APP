@@ -7,7 +7,8 @@ import Loader from '../Components/ReuseableComponent/Loader';
 const UserManagement = () => {
     const dispatch = useDispatch();
     const { allUsers, loading, error } = useSelector((state) => state.userManage); 
-    const IMAGE_URL = 'http://localhost:3002/images/userProfiles'
+    const IMAGE_URL = `${import.meta.env.VITE_BACKEND_URL}/images/userProfiles`;
+
 
     // fetch all User
     useEffect(() => {

@@ -6,7 +6,8 @@ import { toast } from "react-toastify";
 export const fetchAllProducts = () => async (dispatch)=>{
     dispatch(fetchAllProductsLoad());
     try {
-        const response = await axios.get("http://localhost:3002/api/product/fetchAllProduct");
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/product/fetchAllProduct`);
+
         const allProduct = response.data.productsData;
         dispatch(fetchAllProductsSuccess(allProduct));
     } catch (error) {
@@ -22,7 +23,8 @@ export const fetchAllProducts = () => async (dispatch)=>{
 export const fetchNewCollectins = () => async (dispatch) =>{
     dispatch(fetchNewCollectionsLoad())
     try {
-        const response = await axios.get("http://localhost:3002/api/product/newCollectionProducts");
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/product/newCollectionProducts`);
+
         const newCollection = response.data.latestProduct;
         dispatch(fetchNewCollectionsSuccess(newCollection));
     } catch (error) {
@@ -37,7 +39,8 @@ export const fetchNewCollectins = () => async (dispatch) =>{
 export const fetchRelatedProducts = (category) => async (dispatch) =>{
     dispatch(fetchRelatedProductsLoad());
     try {
-        const response = await axios.get(`http://localhost:3002/api/product/relatedProducts/${category}`);
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/product/relatedProducts/${category}`);
+
         
         const relatedData = response.data.relatedProduct;
         dispatch(fetchRelatedProductsSuccess(relatedData));
@@ -53,7 +56,8 @@ export const fetchRelatedProducts = (category) => async (dispatch) =>{
 export const searchProducts = (searchQuery) => async (dispatch) => {
     dispatch(searchProductsLoad());
     try {
-        const response = await axios.get(`http://localhost:3002/api/product/searchproducts/?search=${searchQuery}`);
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/product/searchproducts/?search=${searchQuery}`);
+
         const searchProduct = response.data.searchProduct;
         dispatch(searchProductsSuccess(searchProduct));
     } catch (error) {

@@ -1,16 +1,17 @@
+require('dotenv').config();
 const socketIO = require("socket.io");
 const { encryptMessage, decryptMessage } = require("../Utils/cryptoUtils");
 const ChatMessage = require("../Models/ChatMessageModel");
 
 const setupSocketIO = (server)=>{
-    const io  = socketIO(server,{
+    const io = socketIO(server, {
         cors: {
-            origin: 'http://localhost:5173', //  your frontend URL
+            origin: process.env.FRONTEND_URL,
             methods: ['GET', 'POST'],
             allowedHeaders: ['my-custom-header'],
             credentials: true
         }
-        });
+    });
 
         // Object to keep track of online users
         const onlineUsers = {}; 

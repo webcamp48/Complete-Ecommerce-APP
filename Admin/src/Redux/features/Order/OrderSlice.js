@@ -3,8 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 
-const API_URL = 'http://localhost:3002/api/order'
-
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/order`;
 
 // fetch all order
 export const fetchAllOrders = () => async (dispatch) => {

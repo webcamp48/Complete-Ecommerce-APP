@@ -1,8 +1,9 @@
 // import io from 'socket.io-client';
 // // // socket connection backend
-// const socket = io("http://localhost:3002", {
+// const socket = io(import.meta.env.VITE_BACKEND_URL, {
 //     transports: ["websocket"],
 //     reconnectionAttempts: 5
 // });
+
 
 // export default socket;

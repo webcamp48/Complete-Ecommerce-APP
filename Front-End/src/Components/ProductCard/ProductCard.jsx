@@ -9,7 +9,8 @@ import './ProductCard.css';
 
 const ProductCard = ({showChipBadges,background,text, id, title,description,old_price,new_price,image,category}) => {
 
-    const API_URL_IMAGE = "http://localhost:3002/images/products";
+    const API_URL_IMAGE = `${import.meta.env.VITE_BACKEND_URL}/images/products`;
+
     
   return (
     <div className='card'>

@@ -1,9 +1,10 @@
+require('dotenv').config();
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 const stripe = require('stripe')(stripeSecretKey);
 
 
 const createStripeSession = async (products, totalAmount, orderId) =>{
-    const frontend_url = "http://localhost:5173";
+  const frontend_url = process.env.FRONTEND_URL;
 
     try {
         // Prepare line items for Stripe checkout

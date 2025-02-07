@@ -5,7 +5,7 @@ import axios from "axios";
 export const fetchUsers = () => async (dispatch) => {
   dispatch(fetchUsersPending());
   try {
-    const response = await axios.get("http://localhost:3002/api/auth/getAllUsers");
+    const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/getAllUsers`);
     dispatch(fetchUsersSuccess(response.data.users));
   } catch (error) {
     dispatch(fetchUsersError(error.message));
@@ -15,10 +15,11 @@ export const fetchUsers = () => async (dispatch) => {
 // Custom thunk for fetching chat history
 export const fetchChatHistory = ({senderId, receiverId}) => async (dispatch) => {
   try {
-    const response = await axios.post("http://localhost:3002/api/chats/getMessages", {
+    const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/chats/getMessages`, {
       sender: senderId,
       receiver: receiverId,
     });
+    
     dispatch(fetchChatHistorySuccess(response.data.chats));
   } catch (error) {
     dispatch(fetchChatHistoryError(error.message));

@@ -7,7 +7,7 @@ import { deleteOrder, fetchAllOrders, updateOrderStatus, updatePaymentStatus } f
 
 const AllOrder = () => {
 
-    const API_URL_Image = `http://localhost:3002`;
+    const API_URL_Image = import.meta.env.VITE_BACKEND_URL;
     const dispatch = useDispatch();
     const {orders, status, error} = useSelector((state) => state.order);
 

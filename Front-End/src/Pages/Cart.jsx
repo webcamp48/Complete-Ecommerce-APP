@@ -14,7 +14,7 @@ import Loader from './../Components/ReuseableComponent/Loader'
 
 const Cart = () => {
 
-    const API_URL_IMAGE = "http://localhost:3002/images/products";
+    const API_URL_IMAGE = `${import.meta.env.VITE_BACKEND_URL}/images/products`;
 
     const dispatch = useDispatch();
     const navigate = useNavigate();

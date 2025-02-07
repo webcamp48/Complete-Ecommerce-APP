@@ -63,7 +63,8 @@ const AddProduct = () => {
     const productSubmitHandler = async (e) => {
         e.preventDefault();
         
-        const API_URL = `http://localhost:3002/api/product/addProduct`;
+        const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/product/addProduct`;
+
 
         const formData = new FormData();
         formData.append('image', imagePreview);

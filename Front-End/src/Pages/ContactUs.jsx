@@ -24,7 +24,7 @@ const ContactUs = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3002/api/contact/userContactUs", formData)
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/contact/userContactUs`, formData);
 
             toast.success(response.data.message);
             setFormData({

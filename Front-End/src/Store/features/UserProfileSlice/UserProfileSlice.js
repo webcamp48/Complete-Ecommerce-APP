@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const API_URL = 'http://localhost:3002/api/auth'
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/auth`;
+
 
 export const fetchUserProfile = ({ userId }) => async (dispatch) => {
     dispatch(fetchUserProfileLoad());

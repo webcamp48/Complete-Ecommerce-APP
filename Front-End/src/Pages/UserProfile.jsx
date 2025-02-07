@@ -17,7 +17,7 @@ const UserProfile = () => {
   const userId = useSelector((state) => state.login.userId);
   const { profileData, status } = useSelector((state) => state.profile);
 
-  const API_URL_IMAGE_UPLOAD = "http://localhost:3002/images/userProfiles";
+  const API_URL_IMAGE_UPLOAD = `${import.meta.env.VITE_BACKEND_URL}/images/userProfiles`;
   const [imagePreview, setImagePreview] = useState(null);
   const [activeTab, setActiveTab] = useState('User-Profile');
   const [newHobby, setNewHobby] = useState("");

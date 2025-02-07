@@ -15,7 +15,6 @@ const ProductDetail = () => {
   const {id} = useParams();
   const productData = allProducts.find((item) => String(item._id) === String(id));
 
-  console.log("product details", productData)
 
   useEffect(() => {
     if (statusAllProducts === 'idle') {

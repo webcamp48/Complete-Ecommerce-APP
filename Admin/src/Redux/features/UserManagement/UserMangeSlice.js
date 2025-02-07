@@ -6,7 +6,9 @@ import { toast } from "react-toastify";
 export const fetchAllUserMange = () => async (dispatch) => {
     dispatch(getUserRequest());
     try {
-        const response = await axios.get("http://localhost:3002/api/auth/getAllUsers");        
+        const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/auth/getAllUsers`;
+        const response = await axios.get(API_URL);
+              
         dispatch(getUserSuccess(response.data.users));
     } catch (error) {
         dispatch(getUserFailure(error.message || "Failed To Fetch User!"));
@@ -17,7 +19,8 @@ export const fetchAllUserMange = () => async (dispatch) => {
 export const deleteUserMange = (id) => async (dispatch) => {
     dispatch(getUserRequest())
     try {
-        const response = await axios.delete(`http://localhost:3002/api/auth/deleteUser/${id}`);
+        const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/auth/deleteUser/${id}`;
+        const response = await axios.delete(API_URL);        
         toast.success(response.data.message);
         dispatch(fetchAllUserMange());
     } catch (error) {

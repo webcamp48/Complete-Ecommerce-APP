@@ -8,7 +8,8 @@ import { toast } from 'react-toastify';
 export const adminLogin = (formData, navigate) => async (dispatch) => {
   dispatch(loginStart());
   try {
-    const response = await axios.post('http://localhost:3002/api/admin/adminLogin', formData);
+    const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/admin/adminLogin`;
+    const response = await axios.post(API_URL, formData);
     localStorage.setItem('adminToken', response.data.token);
     dispatch(loginSuccess(response.data));
     toast.success(response.data.message);

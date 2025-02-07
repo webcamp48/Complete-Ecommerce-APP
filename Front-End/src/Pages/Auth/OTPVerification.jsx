@@ -34,11 +34,12 @@ const OTPVerification = () => {
         let apiUrl = '';
 
         if (from === 'login') {
-          apiUrl = "http://localhost:3002/api/auth/verifyEmailOTP";
+          apiUrl = `${import.meta.env.VITE_BACKEND_URL}/api/auth/verifyEmailOTP`;
         }else if (from === 'reset') {
-          apiUrl = "http://localhost:3002/api/auth/verifyEmailOTP";
+          apiUrl = `${import.meta.env.VITE_BACKEND_URL}/api/auth/verifyEmailOTP`;
         } else if (from === 'signup') {
-          apiUrl = "http://localhost:3002/api/auth/verifyMobileOTP";
+          apiUrl = `${import.meta.env.VITE_BACKEND_URL}/api/auth/verifyMobileOTP`;
+
         }
         let otpValue = otp.join("");
         const response = await axios.post(apiUrl, {otp : otpValue});

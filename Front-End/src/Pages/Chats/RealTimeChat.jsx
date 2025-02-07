@@ -8,11 +8,11 @@ import Loader from './../../Components/ReuseableComponent/Loader';
 import { fetchUsers, fetchChatHistory, addMessage, fetchSelectedUser, updateUserStatus } from './../../Store/features/ChatSlice/ChatSlice';
 
 // import socket from './socket';
-const socket = io("http://localhost:3002")   // socket connection backend
+const socket = io(import.meta.env.VITE_BACKEND_URL);   // socket connection backend
 
 const RealTimeChat = () => {
 
-    const API_URL_IMAGE_UPLOAD = "http://localhost:3002/images/userProfiles";
+    const API_URL_IMAGE_UPLOAD = `${import.meta.env.VITE_BACKEND_URL}/images/userProfiles`;
     const dispatch = useDispatch();
     const { messages, users, selectedUser, loading, error } = useSelector((state) => state.chat);
     const senderId = useSelector((state) => state.login.userId); // current user Sender ID
