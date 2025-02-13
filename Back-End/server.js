@@ -28,12 +28,15 @@ connectDB();
 app.use(express.json());
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "https://complete-ecommerce-app-front-end.onrender.com", 
+    origin: [
+        process.env.FRONTEND_URL || "https://complete-ecommerce-app-front-end.onrender.com",
+        process.env.ADMIN_URL || "https://complete-ecommerce-app-admin.onrender.com"
+    ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-    
+    credentials: true
 }));
+
 
 // api endpoints
 app.use("/api/auth", authRouter);
