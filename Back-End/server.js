@@ -26,9 +26,13 @@ connectDB();
 
 // MiddleWare
 app.use(express.json());
+
 app.use(cors({
     origin: process.env.FRONTEND_URL || https://complete-ecommerce-app-front-end.onrender.com, 
-    credentials: true
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+    
 }));
 
 // api endpoints
