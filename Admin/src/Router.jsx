@@ -9,7 +9,7 @@ import UpdateProduct from './Pages/ProductManage/UpdateProduct';
 import AdminLogin from './Pages/AdminLogin';
 import Order from './Pages/Order';
 import ContactUs from './Pages/ContactUs';
-import FetchSlider from './Pages/Slider/fetchSlider';
+import FetchSlider from './Pages/Slider/FetchSlider';
 import UpdateSlider from './Pages/Slider/UpdateSlider';
 import AddSlider from './Pages/Slider/AddSlider';
 import UserManagement from './Pages/UserManagement';
