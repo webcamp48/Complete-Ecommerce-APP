@@ -1,4 +1,5 @@
 const express = require("express");
+require('dotenv').config();
 const http = require("http");
 const cors = require('cors');
 const path = require("path");
@@ -25,7 +26,12 @@ connectDB();
 
 // MiddleWare
 app.use(express.json());
-app.use(cors({ origin: '*', credentials: true }));   // all url access backend in client-side
+app.use(cors({
+    origin: process.env.FRONTEND_URL, 
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+}));
 
 // api endpoints
 app.use("/api/auth", authRouter);
