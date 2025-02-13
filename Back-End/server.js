@@ -28,7 +28,6 @@ connectDB();
 app.use(express.json());
 app.use(cors({
     origin: process.env.FRONTEND_URL || https://complete-ecommerce-app-front-end.onrender.com, 
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true
 }));
 
