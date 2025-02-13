@@ -14,7 +14,7 @@ import OTPVerification from "./Pages/Auth/OTPVerification";
 import Checkout from "./Pages/Checkout";
 import SearchProduct from "./Components/SearchProduct/SearchProduct";
 import ContactUs from "./Pages/ContactUs";
-import VerifyPayementOrder from "./Pages/verifyPayementOrder";
+import VerifyPayementOrder from "./Pages/VerifyPayementOrder";
 import ResetPassword from "./Pages/Auth/ResetPassword";
 import UserProfile from "./Pages/UserProfile";
 import UserOrderList from "./Pages/UserOrderList";
